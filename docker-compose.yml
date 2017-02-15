@@ -1,0 +1,9 @@
+version: '2'
+services:
+  npm_proxy:
+    build: npm-cache-server
+    volumes:
+      - /docker/npm-cache-server/data:/npm-proxy-cache/
+    restart: always
+    ports:
+      - "8888:8080"
